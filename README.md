@@ -29,35 +29,32 @@ To set up the project, follow these steps:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/obrm/connect-front-to-back.git
+git clone https://github.com/MYSELF-BINEET/3WInternship.gi
 ```
 
 2. Install the necessary dependencies:
 
 ```bash
+cd frontend
+npm install
+cd ..
+cd backend
 npm install
 ```
 
-3. Create a config.env file in the config directory:
 
-```bash
-cd config
-touch config.env
 ```  
-4. Add the following lines to your config.env file:
+3. Add the following lines to your config.env file:
 ```env
 NODE_ENV=development
-PORT=5000
-```
+PORT=5050
+CLOUDINARY_CLOUD_NAME=dj76qfsys
+CLOUDINARY_API_KEY=911371812386156
+CLOUDINARY_API_SECRET=t1GBAfax_vXNgCMNp3PB0kxHFYM
+MONGO_URI=mongodb+srv://Bineet:PLJM6PKxBgI4paEo@cluster0.ntw5m.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+PORT=5050
+JWT_SECRET="LhEVCItMgnC3msS1aSdun1ZF4VPECx0rl1VQPrxCqoSJQwA6Hj"
 
-6. Navigate to the client directory:
-```bash
-cd ..
-cd client
-```
-7. Install the necessary dependencies[^1]:
-```bash
-yarn
 ```
 
 #### Running the Application
@@ -65,9 +62,13 @@ yarn
 To run the application, in the root directory, start the Node/Express server and the react application concurrently:
 
 ```bash
+cd backend
+npm run dev
+cd ..
+cd frontend
 npm run dev
 ```
-The server will be running on `http://localhost:5000` and the React Vite application will be running on `http://localhost:5173`.
+The server will be running on `http://localhost:5050` and the React Vite application will be running on `http://localhost:5173`.
 
 Now you have both the front-end and back-end servers running. You can interact with the application through the browser on `http://localhost:5173` and see how the front-end React app communicates with the back-end Node/Express API.
 
