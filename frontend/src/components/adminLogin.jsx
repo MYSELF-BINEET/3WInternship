@@ -26,7 +26,7 @@ const AdminLogin = () => {
     }
 
     try {
-      const response = await fetch('http://localhost:5050/api/admin/login', {
+      const response = await fetch('https://threewinternship.onrender.com/api/admin/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -34,7 +34,7 @@ const AdminLogin = () => {
         body: JSON.stringify({ username, password }),
         credentials: 'include',
       });
-
+    //   toast.success("Login SuccessFull");
       if (response.ok) {
         // alert('Login successful');
         toast.success("Login SuccessFull");

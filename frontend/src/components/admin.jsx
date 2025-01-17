@@ -7,7 +7,7 @@ const AdminDashboard = () => {
 
   const fetchSubmissions = async () => {
     try {
-      const response = await fetch('http://localhost:5050/api/users', {
+      const response = await fetch('https://threewinternship.onrender.com/api/users', {
         method: 'GET',
         credentials: 'include',
       });

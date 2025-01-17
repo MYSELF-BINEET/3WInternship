@@ -31,7 +31,7 @@ const UserSubmissionForm = () => {
     const data = new FormData(formElement); // Collect form data directly from the form
   
     try {
-      const response = await fetch("http://localhost:5050/api/users", {
+      const response = await fetch("https://threewinternship.onrender.com/api/users", {
         method: "POST",
         body: data,
       });

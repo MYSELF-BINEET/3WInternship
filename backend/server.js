@@ -17,17 +17,18 @@ app.use(express.urlencoded({extended:true}));
 //cookie-parser
 app.use(cookieParser());
 
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => console.log("MongoDB connected"))
+  .catch((err) => console.error("MongoDB connection error:", err));
+
 app.use(cors({
-    origin:"http://localhost:5173",
+    origin:["http://localhost:5173","https://threewinternship.onrender.com"],
     methods:'GET,POST,PUT,DELETE',
     credentials: true
 }));
 
 // MongoDB connection
-mongoose
-  .connect(process.env.MONGO_URI)
-  .then(() => console.log("MongoDB connected"))
-  .catch((err) => console.error("MongoDB connection error:", err));
 
 // Routes
 app.use(userRoutes);
