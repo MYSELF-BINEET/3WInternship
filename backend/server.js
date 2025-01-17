@@ -23,7 +23,7 @@ mongoose
   .catch((err) => console.error("MongoDB connection error:", err));
 
 app.use(cors({
-    origin:["http://localhost:5173","https://threewinternship.onrender.com"],
+    origin:["http://localhost:5173","https://threewsolss.netlify.app"],
     methods:'GET,POST,PUT,DELETE',
     credentials: true
 }));
